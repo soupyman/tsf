@@ -287,14 +287,14 @@ bool CSection::WriteBack(CESData * pES,u32 PktIdx)
 	CPacket  * pPkt = pES->GetPacket(PktIdx);
 	CommonSection * pPS = pPkt->GetSectionAddress();
 	s32 NeedCopyCount = GetSectionLength() + 3;
-	if(NeedCopyCount < (pES->GetPacketSize()- pPkt->GetDataStartOffset()))/* in one packet
+	if(NeedCopyCount < (pES->GetPacketSize()- pPkt->GetDataStartOffset()))//in one packet
 	{
 		memcpy((u8 *)pPS, SectionData, NeedCopyCount);
 		//ret = pES->SavePacketToTS(PktIdx);
 		ASSERT(0);
 	}
 	else
-	{/*	this section in more than one Packet
+	{//	this section in more than one Packet
 		u8 * BuffAddr = SectionData;
 		u8 CurCpy;
 		memcpy(pPS , BuffAddr , (pES->GetPacketSize() - pPkt->GetDataStartOffset()));
@@ -312,7 +312,7 @@ bool CSection::WriteBack(CESData * pES,u32 PktIdx)
 			memcpy(((u8 *)(pPkt->GetPktData()))+ PACKET_HEAD_SIZE ,BuffAddr , CurCpy);
 			ret = pES->SavePacketToTS(PktIdx);
 			BuffAddr += CurCpy;
-			NeedCopyCount -= CurCpy;/* may be copy more than we want
+			NeedCopyCount -= CurCpy;// may be copy more than we want
 		}
 	}
 	return ret;

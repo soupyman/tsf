@@ -262,7 +262,9 @@ void CContentFile::SetCurrentValue(s8 *s, u32 len)
 					break;
 				case FIELD_FMT_BCD:
 					for(int i = pfdn->Lenth - 4 ; i >= 0; i -= 4)
-						((((*s) - '0') >> (i)) & 0x0F) ;
+					{
+						((((*s) - '0') >> (i)) & 0x0F) ; // may compatible problem
+					}
 
 					break;
 				case FIELD_FMT_MJD:
@@ -279,7 +281,9 @@ void CContentFile::SetCurrentValue(s8 *s, u32 len)
 
 					INF("memcpy [%s] lenth %d .\n", pData, cpylen);
 				}
-				break;
+					break;
+				default:
+					break;
 			}
 		}
 	}

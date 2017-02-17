@@ -253,8 +253,8 @@ Result CTable::BuildPrivious()
 	return ret;
 }
 
-/*
-return value only indicate current version table build successful or not
+
+//return value only indicate current version table build successful or not
 
 Result CTable::BuildNext()
 {

@@ -47,11 +47,10 @@ void	 *CPacket::GetPktData(void)
 	return (void *)Data;
 }
 
-bool CPacket::IsValid()/*	this should be delete 	*/
+
+bool CPacket::IsValid()
 {
-	if(Data	== NULL)
-		return false;
-	else
+	/*	this should be updated 	*/
 		return true;
 }
 

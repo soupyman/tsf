@@ -172,7 +172,7 @@ bool CXmlFile::Load(void)
 		XML_SetUserData(parser, this);
 		XML_SetCharacterDataHandler(parser, xmlparsedata);
 
-		while(CurLenth = Read((u8 *)buf, READ_BUFF_SIZE))
+		while((CurLenth = Read((u8 *)buf, READ_BUFF_SIZE)))
 		{
 			if(XML_Parse(parser, buf, CurLenth , ReachEnd()) == XML_STATUS_ERROR)
 			{

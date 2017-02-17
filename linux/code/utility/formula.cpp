@@ -132,7 +132,8 @@ bool CFormula::DumpToString(CString & TraceStr)
 			{
 				CFormula * pFml = (CFormula *)GetChildren();
 				CFormulaOperatorNode * pFON ;
-				pFON = (CFormulaOperatorNode *)ptn;
+				pFON = (CFormulaOperatorNode *)ptn;
+
 					
 				if(pFml)
 				{
@@ -156,9 +157,12 @@ bool CFormula::DumpToString(CString & TraceStr)
 							case CFormulaOperatorNode::EQUAL:
 								TraceStr.AppendFormat(" = ");
 								break;
+							default:
+								break;
 						}
 						pFml = (CFormula *)(pFml->GetRightBrother());
-						ptn = (CFormulaNode *)pFml->GetMyNode();
+						ptn = (CFormulaNode *)pFml->GetMyNode();
+
 						if(ptn->type == CFormulaNode::OPERATOR)
 						{/*second son is operator mean () is used for change priority */
 							TraceStr.AppendFormat(" ( ");

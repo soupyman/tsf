@@ -499,7 +499,8 @@ bool CTSFile::BuildTable(CTable	 &pTbl)
 
 	while((INVALID_PKT_IDX == CurIdx) || (CurIdx < (m_PacketCount - 1)))
 	{
-		if(pSec = BuildNextSection(CurIdx, pTbl))
+		pSec = BuildNextSection(CurIdx, pTbl);
+		if(pSec)
 		{
 			//DBG("cur %d, total %d, percentage %d %% .\r\n",
 			//PktIdx, m_PacketCount, PktIdx * 100 / m_PacketCount);
@@ -706,7 +707,7 @@ bool CTSFile::RemuxPkt(CPacket   * * pkt, u32 PktCnt, u32 Gap)
 		/* \10b means back 10 char. */
 	}
 	INF(" write %d packets in tsfile. ", WriteCnt);
-
+	return true;
 }
 
 bool CTSFile::EraseTable(CTable	 &pTbl)
@@ -744,6 +745,7 @@ bool CTSFile::EraseTable(CTable	 &pTbl)
 		}
 	}
 	INF("\10berase %d packets of old table finished.", EraseCnt);
+	return true;
 }
 
 

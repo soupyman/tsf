@@ -408,6 +408,7 @@ bool ExtractOtherTable(void *pParam)
 
 		return ExtractTable(pts, tbl);
 	}
+	return false;
 }
 
 bool FormatDbDumpOpr(void *pParam)
@@ -605,7 +606,7 @@ bool ToolsSplitFileOpr(void *pParam)
 	
 	if(true ==  pOldFile->Open(CFile::OPEN_TEXT_READ_ONLY))
 	{
-		while(ReadLen = pOldFile->Read((u8 *)pData, step))
+		while((ReadLen = pOldFile->Read((u8 *)pData, step)))
 		{
 			Newfilename.Format("%d_", FileIdx++);
 			Newfilename.Append(pOldFile->GetFileName());

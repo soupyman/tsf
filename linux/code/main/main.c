@@ -590,7 +590,7 @@ void ShowAboutInfo()
 
 void LoadDefaultFormat()
 {
-	CFile::SetWorkDir("//usr//etc//tsf//format//");
+	CFile::SetWorkDir(".//format//");
 	CFormatFile *pFF = new CFormatFile("format.fdf");
 	pFF->Load();
 	delete pFF;

@@ -124,7 +124,7 @@ bool CFormatTree::SearchBackField( CString & pSLabel)
 	{
 		CTokenNode * pNode = (CTokenNode *)BigBrother->GetMyNode();
 		
-		if((pNode->NodeType == CTokenNode::DATA_NODE )&&(-1 != ((CDataNode *)pNode)->NameString.Find(pSLabel)))
+		if((pNode->NodeType == CTokenNode::DATA_NODE )&&(false != ((CDataNode *)pNode)->NameString.Find(pSLabel)))
 		{
 			return true;
 		}
@@ -431,7 +431,9 @@ CString CFormatTree::GetFmtTreeName(void)
 		{
 			CTableHeadNode * pdn = (CTableHeadNode *)ptn  ;
 			ret.Format("<TABLE format tree name='%s'  id='%d' >" ,pdn->Name.c_str() , pdn->ID);
-		}				
+		}
+		default:
+		break;				
 	}
 	return ret;
 }

@@ -45,7 +45,7 @@ CTree::~CTree(void)
 void CTree::ReleaseChildren(void)
 {
 	CTree * pc;
-	while(pc = (CTree *)Children)
+	while((pc = (CTree *)Children))
 	{
 		pc->Father = NULL;
 		Children = pc->RightBrother;
