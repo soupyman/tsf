@@ -1,0 +1,12 @@
+<!-- Copyright content of CA Descriptor --> 
+ 
+<DESCRIPTOR  name = 'CaDescriptor' id='9'> 
+     	<FIELD name='descriptor_tag' lenth='8' />
+     	<FIELD name='descriptor_length' lenth='8' />
+     	<FIELD name='ca_system_id ' lenth='16' />
+    	<RESERVE  lenth='3' />
+     	<FIELD name='ca_pid ' lenth='13' />
+	<LOOP lenth='descriptor_length - 4'>
+		<FIELD name='private_data_byte' lenth='8' />
+	</LOOP> 
+</DESCRIPTOR>

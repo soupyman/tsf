@@ -1,0 +1,15 @@
+<!-- Copyright content of SW upgrade ID Descriptor --> 
+ 
+<DESCRIPTOR  name = 'SwUpgradeId Desc' id='227'> 
+     	<FIELD name='descriptor_tag' lenth='8' format='hex'/>
+     	<FIELD name='descriptor_length' lenth='8'/>
+	<FIELD name='manufacture_id' lenth='8' />
+	<LOOP lenth='descriptor_length - 1'>
+		<FIELD name='model_id' lenth='8' />
+		<FIELD name='hardware_id' lenth='8' />
+    		<RESERVE  lenth='12' />
+		<FIELD name='last_subtable_id' lenth='4' />
+		<FIELD name='wait_timeout' lenth='6' />
+     		<RESERVE lenth='10' />
+	</LOOP> 
+</DESCRIPTOR>

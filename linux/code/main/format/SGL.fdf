@@ -1,0 +1,22 @@
+
+
+<!-- Copyright SGL FORMAT --> 
+
+<TABLE name='SGL' id='145' crc='true' > 
+		<FIELD name='table_id' lenth='8' format='hex'/> 
+		<FIELD name='section_syntax_indicator' lenth='1' format='hex'/>
+		<FIELD name='start_indicator' lenth='1' format='hex'/>
+		<RESERVE  lenth='2' /> 
+		<FIELD name='section_length' lenth='12' format='hex'/> 
+		<FIELD name='table_id_ext' lenth='12' format='hex'/> 	
+		<RESERVE  lenth='6' /> 	
+		<FIELD name='version_number' lenth='5' format='hex'/> 	
+		<FIELD name='current_next_indicator' lenth='1' format='hex'/> 	 
+		<FIELD name='section_number' lenth='8' format='hex'/> 
+		<FIELD name='last_section_number' lenth='8' format='hex'/> 
+		<FIELD name='file_name_lenth' lenth='8' format='hex'/> 	
+		<FIELD name='file_name' lenth='file_name_lenth * 8' format='str'/> 	
+		<FIELD name='file_data_lenth' lenth='32' format='hex'/> 	
+		<FIELD name='file_data' lenth='file_data_lenth * 8' format='hex'/> 	
+		<FIELD name='CRC_32' lenth='32' format='hex'/>
+</TABLE> 

@@ -1,0 +1,34 @@
+<!-- Copyright PMT FORMAT --> 
+<TABLE name='PMT' id='2' > 
+		<FIELD name='table_id' lenth='8' format='hex'/> 
+		<FIELD name='section_syntax_indicator' lenth='1' format='hex'/>
+		<RESERVE  lenth='3' /> 
+		<FIELD name='section_length' lenth='12' format='hex'/> 
+		<FIELD name='program_number' lenth='16' format='hex'/> 	
+		<RESERVE  lenth='2' /> 	
+		<FIELD name='version_number' lenth='5' format='hex'/> 	
+		<FIELD name='current_next_indicator' lenth='1' format='hex'/> 	 
+		<FIELD name='section_number' lenth='8' format='hex'/> 
+		<FIELD name='last_section_number' lenth='8' format='hex'/> 
+		<RESERVE  lenth='3' /> 
+		<FIELD name='PCR_PID' lenth='13' format='hex'/> 	
+
+		<RESERVE  lenth='4' /> 
+		<FIELD name='program_info_length' lenth='12' format='hex'/> 	
+		<LOOP  lenth='program_info_length'> 
+			<DESCRIPTOR/>
+		</LOOP> 
+
+		<LOOP name='ES' lenth='section_length -13 - program_info_length'> 
+			<FIELD name='stream_type' lenth='8' format='hex'/>
+			<RESERVE lenth='3' />
+			<FIELD name='elementary_PID' lenth='13' format='hex'/>
+			<RESERVE lenth='4' />
+			<FIELD name='ES_info_length' lenth='12' format='hex'/>
+			<LOOP  lenth='ES_info_length'> 
+				<DESCRIPTOR/>
+			</LOOP> 
+		</LOOP> 
+
+		<FIELD name='CRC_32' lenth='32' format='hex'/>
+</TABLE> 

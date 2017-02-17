@@ -1,0 +1,9 @@
+<!-- Copyright content of download SW Descriptor --> 
+ 
+<DESCRIPTOR  name = 'download software Desc' id='226'> 
+     	<FIELD name='descriptor_tag' lenth='8' format='hex'/>
+     	<FIELD name='descriptor_length' lenth='8'/>
+	<FIELD name='software_version' lenth='16' />
+	<FIELD name='software_size' lenth='32'/>
+	<FIELD name='software_CRC' lenth='32' />
+</DESCRIPTOR>

@@ -1,0 +1,15 @@
+<!-- SI PSI FORMAT DEFINE FILE --> 
+
+<INCLUDE>
+<FILE>	CAT.fdf	</FILE>
+<FILE> PAT.fdf </FILE>
+<FILE>  PMT.fdf </FILE>
+<FILE> DDT.fdf </FILE>
+<FILE> SGL.fdf </FILE>
+<FILE> CADescriptor.fdf </FILE>
+<FILE> NetNameDescriptor.fdf </FILE>
+<FILE> SwUpgradeID_Desc.fdf </FILE>
+<FILE> downloadSW_Desc.fdf </FILE>
+</INCLUDE>
+
+

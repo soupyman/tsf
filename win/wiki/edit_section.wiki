@@ -1,0 +1,20 @@
+=How to edit section=
+
+
+
+1. { means sub body start
+
+2. } means sub body end
+
+3. # means comment, like \\ in C++
+
+4. field define format as bellow:
+
+              field_name: field_lenth: field_value
+
+field_name dosen't mean's a lot here, only "section_length" and "length" are used for check if format length ok.
+field_lenth is length in bit of this field.
+field_value is value in hex format.
+
+
+* note*: the total length inside {} must be correct, same as "length" field plus head length.

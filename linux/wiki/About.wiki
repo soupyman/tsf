@@ -1,0 +1,25 @@
+#summary about this software.
+
+= About =
+
+this is a linux version of tsfriend.
+for edit SI/PSI and other ts information.
+
+windows version:
+http://code.google.com/p/tsfriend/
+
+
+
+==difference with windows version:==
+
+ # without multi thread feature.
+ # without mpeg2 video decode feature.
+ # without UI extend tree feature.
+ # use xml file format to replace private file format for format file and content file.
+ # use expat to parse xml file.
+
+
+===Note,=== 
+integrate expat-2.0.1 from http://sourceforge.net/projects/expat
+
+note: en7cD5fQ5Fn2 

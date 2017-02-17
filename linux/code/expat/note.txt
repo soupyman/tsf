@@ -1,0 +1,25 @@
+		soup add this note for record this lib's history.
+
+this lib is down load from 
+http://sourceforge.net/projects/expat/
+
+run ./configure to generate expat_config.h
+copy expat_config.h to lib\
+
+delete following from file xmlparse.c xmlrole.c xmltok.c
+
+#ifdef COMPILED_FROM_DSP
+#include "winconfig.h"
+#elif defined(MACOS_CLASSIC)
+#include "macconfig.h"
+#elif defined(__amigaos4__)
+#include "amigaconfig.h"
+#elif defined(__WATCOMC__)
+#include "watcomconfig.h"
+#elif defined(HAVE_EXPAT_CONFIG_H)
+
+change #include <expat_config.h> to #include "expat_config.h" 
+
+
+above information may be necessary when port to other platform
+

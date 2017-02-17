@@ -1,0 +1,30 @@
+<!-- Copyright PAT FORMAT --> 
+<TABLE name='PAT' id='0' > 
+		<FIELD name='table_id' lenth='8' format='hex'/> 
+		<FIELD name='section_syntax_indicator' lenth='1' format='hex'/>
+		<RESERVE  lenth='3' /> 
+		<FIELD name='section_length' lenth='12' format='hex'/> 
+		<FIELD name='transport_stream_id' lenth='16' format='hex'/> 	
+		<RESERVE  lenth='2' /> 	
+		<FIELD name='version_number' lenth='5' format='hex'/> 	
+		<FIELD name='current_next_indicator' lenth='1' format='hex'/> 	 
+		<FIELD name='section_number' lenth='8' format='hex'/> 
+		<FIELD name='last_section_number' lenth='8' format='hex'/> 
+		
+		<LOOP name='service' lenth='section_length -9'> 
+			<FIELD name='program_number' lenth='16' format='hex'/>
+			<RESERVE lenth='3' />
+			<IF condition='program_number'>
+				<FIELD name='program_map_PID - PMT' lenth='13' format='hex'/>
+			</IF>
+			<ELSE>
+				<FIELD name='network_id - NIT' lenth='13' format='hex'/> 
+			</ELSE>
+		</LOOP> 
+
+		<FIELD name='CRC_32' lenth='32' format='hex'/>
+</TABLE> 
+
+
+
+

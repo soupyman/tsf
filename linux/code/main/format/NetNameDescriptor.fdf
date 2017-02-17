@@ -1,0 +1,10 @@
+
+<!-- Copyright content of network name Descriptor --> 
+ 
+<DESCRIPTOR  name = 'network name Descriptor' id='64'> 
+     	<FIELD name='descriptor_tag' lenth='8' format='hex'/>
+     	<FIELD name='descriptor_length' lenth='8' format='hex'/>
+	<LOOP lenth='descriptor_length'>
+		<FIELD name='name_byte' lenth='8' format='str'/>
+	</LOOP> 
+</DESCRIPTOR>

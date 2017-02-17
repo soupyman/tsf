@@ -1,0 +1,22 @@
+#summary help user to begin use it.
+
+= how to use =
+
+1.download the source code by SVN. 
+
+2.make install on Linux. 
+
+3.try *tsf _tsfilename_* command.
+
+= add your own format =
+
+when you want to parse and edit your private format, 
+or you think my parse is not correct
+
+1.add your own format file refer to format file in /main/format/ . 
+
+2.place it to /main/format . 
+
+3.edit /main/format/format to include your own format file. 
+
+4.make install again. 

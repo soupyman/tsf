@@ -1,0 +1,29 @@
+
+
+<descriptor:linkage descriptor:74>
+
+{
+     	descriptor_tag                       :8
+     	descriptor_length                    :8
+     	ts_id : 16
+	onid : 16
+	sid:16
+	linkage_type:8
+	[if](linkage_type = 154)#154
+	{
+		service_key	:16
+		ls_replacement: 1
+		use_sevice_name:1
+		:6
+
+		service_name : 8*(descriptor_length - 10) :s
+
+	}
+
+	[else]
+
+	{
+		private_data: (descriptor_length - 7)*8
+	}
+}
+

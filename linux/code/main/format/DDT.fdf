@@ -1,0 +1,31 @@
+<!-- Copyright content of DDT --> 
+<TABLE name='DDT' id='160' crc='true'> 
+		<FIELD name='table_id' lenth='8' format='hex'/> 
+		<FIELD name='section_syntax_indicator' lenth='1' format='hex'/> 
+		<RESERVE lenth='3' /> 
+		<FIELD name='section_length' lenth='12' format='hex'/>
+		<RESERVE lenth='12' />
+		<FIELD name='sub_table_id' lenth='4' format='hex'/> 
+		<RESERVE lenth='2' /> 
+		<FIELD name='version_number' lenth='5' format='hex'/>
+		<FIELD name='current_next_indicator' lenth='1' format='hex'/>
+		<FIELD name='section_number' lenth='8' format='hex'/> 
+		<FIELD name='last_section_number' lenth='8' format='hex'/>
+		<FIELD name='signature_indicator' lenth='4' format='hex'/>
+		<FIELD name='descriptor_loop_lenth' lenth='12' format='hex'/>
+		<LOOP lenth='descriptor_loop_lenth'> 
+			<DESCRIPTOR/>
+		</LOOP> 
+		<IF condition='signature_indicator = 3'> 
+			<RESERVE lenth='4' /> 
+			<FIELD name='signature_lenth' lenth='12' format='hex'/>
+			<FIELD name='payload_byte' lenth='8*(section_length -13 - descriptor_loop_lenth-signature_lenth)' format='hex'/>
+			<FIELD name='signature_data_byte' lenth='8*signature_lenth' format='hex'/>
+		</IF> 
+		<ELSE>
+			<FIELD name='payload_byte' lenth='8 * (section_length -11 - descriptor_loop_lenth)' format='hex'/>
+		</ELSE>
+		<FIELD name='CRC_32' lenth='32' format='hex'/>
+</TABLE> 
+
+

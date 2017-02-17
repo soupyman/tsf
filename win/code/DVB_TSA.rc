@@ -1,0 +1,496 @@
+// Microsoft Visual C++ generated resource script.
+//
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "resource.h"
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// ??(???????) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\DVB_TSA.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDT_OPEN_TOOLBAR        BITMAP                  "res\\Open_Toolbar.bmp"
+IDT_CLOSE_TOOLBAR       BITMAP                  "res\\Close_Toolbar.bmp"
+IDB_TREE_ICON           BITMAP                  "res\\Tree_Icon.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDT_OPEN_TOOLBAR TOOLBAR  20, 15
+BEGIN
+    BUTTON      ID_TS_FILE_CLOSE
+    BUTTON      ID_SYSTEM_LOAD_USER_DEFINE_FORMAT
+    BUTTON      ID_APP_ABOUT
+    SEPARATOR
+    BUTTON      ID_PARSE_PAT
+    BUTTON      ID_PARSE_CAT
+    BUTTON      ID_PARSE_PMT
+    BUTTON      ID_PARSE_NIT_A
+    BUTTON      ID_PARSE_BAT
+    BUTTON      ID_PARSE_SDT_A
+    SEPARATOR
+    BUTTON      ID_EDIT_DELETE
+    BUTTON      ID_EDIT_EDIT
+    BUTTON      ID_EDIT_SAVE
+    BUTTON      ID_EDIT_COPY_PART
+    BUTTON      ID_EDIT_COMBO_BOX
+    BUTTON      ID_EDIT_SEARCH
+    SEPARATOR
+    BUTTON      ID_TOOLS_CALCULATOR
+END
+
+IDT_CLOSE_TOOLBAR TOOLBAR  20, 15
+BEGIN
+    BUTTON      ID_TS_FILE_OPEN
+    BUTTON      ID_SYSTEM_LOAD_USER_DEFINE_FORMAT
+    BUTTON      ID_APP_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "System(&S)"
+    BEGIN
+        MENUITEM "Config",                      ID_SYSTEM_CONFIG
+        MENUITEM "Load format",                 ID_SYSTEM_LOAD_USER_DEFINE_FORMAT
+
+        MENUITEM SEPARATOR
+        MENUITEM "Exit(&X)",                    ID_APP_EXIT
+    END
+    POPUP "TS(&T)"
+    BEGIN
+        MENUITEM "Open",                        ID_TS_FILE_OPEN
+        MENUITEM "Close",                       ID_TS_FILE_CLOSE
+    END
+    POPUP "SI/PSI(&P)"
+    BEGIN
+        MENUITEM "PAT",                         ID_PARSE_PAT
+        MENUITEM "PMT",                         ID_PARSE_PMT
+        MENUITEM "CAT",                         ID_PARSE_CAT
+        MENUITEM "TSDT",                        ID_PARSE_TSDT
+        MENUITEM "NIT_A",                       ID_PARSE_NIT_A
+        MENUITEM "NIT_O",                       ID_PARSE_NIT_O
+        MENUITEM "SDT_A",                       ID_PARSE_SDT_A
+        MENUITEM "SDT_O",                       ID_PARSE_SDT_O
+        MENUITEM "BAT",                         ID_PARSE_BAT
+        MENUITEM "PFEIT_A",                     ID_PARSE_PFEIT_A
+        MENUITEM "PFEIT_O",                     ID_PARSE_PFEIT_O
+        MENUITEM "SEIT_A",                      ID_PARSE_SEIT_A
+        MENUITEM "SEIT_O",                      ID_PARSE_SEIT_O
+        MENUITEM "TDT",                         ID_PARSE_TDT
+        MENUITEM "RST",                         ID_PARSE_RST
+        MENUITEM "TOT",                         ID_PARSE_TOT
+        MENUITEM "DIT",                         ID_PARSE_DIT
+        MENUITEM "SIT",                         ID_PARSE_SIT
+        MENUITEM "ECM_E",                       ID_PARSE_ECM_E
+        MENUITEM "ECM_O",                       ID_PARSE_ECM_O
+        MENUITEM "EMM",                         ID_PARSE_EMM
+        MENUITEM "Private",                     ID_PARSE_SPEC_SI_PSI
+        MENUITEM "Save to file",                ID_SI_PSI_SAVE_AS
+    END
+    POPUP "Edit(&E)"
+    BEGIN
+        MENUITEM "Save edit",                   ID_EDIT_SAVE
+        MENUITEM "Delete section",              ID_EDIT_DELETE
+        MENUITEM "Edit section",                ID_EDIT_EDIT
+        MENUITEM "Search section",              ID_EDIT_SEARCH
+        MENUITEM "CopyPart TS",                 ID_EDIT_COPY_PART
+    END
+    POPUP "Tools(&T)"
+    BEGIN
+        MENUITEM "calculator",                  ID_TOOLS_CALCULATOR
+        MENUITEM "notepad",                     ID_TOOLS_NOTEPAD
+        MENUITEM "paint",                       ID_TOOLS_PAINT
+        MENUITEM "CRC",                         ID_TOOLS_CRC
+    END
+    POPUP "View(&V)"
+    BEGIN
+        MENUITEM "ToolBar(&T)",                 ID_WINDOW_ARRANGE
+        MENUITEM "StatusBar(&S)",               ID_VIEW_STATUS_BAR
+    END
+    POPUP "Help(&H)"
+    BEGIN
+        MENUITEM "About DVB_TSA(&A)...",        ID_APP_ABOUT
+    END
+    POPUP "Play"
+    BEGIN
+        MENUITEM "Test",                        ID_PLAY_TEST
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_START_INDEX "0000"
+    ID_INDICATOR_END_INDEX  "0000"
+    ID_INDICATOR_ACTION_STATUS "action status"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_UNTITLED        "TSA"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDP_ASK_TO_SAVE     "Save?"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "DVB_TSA"
+    AFX_IDS_IDLEMESSAGE     "ready"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_SYSTEM_CONFIG        "System configration"
+    ID_SYSTEM_LOAD_USER_DEFINE_FORMAT "Load user define format file"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_TS_FILE_OPEN         "Open TS file"
+    ID_TS_FILE_CLOSE        "Close current TS file"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_ES_PARSE             "Parse ES show one of the packets"
+    ID_ES_SAVE              "Save current ES to TS"
+    ID_ES_CHANGE_PID        "Change current es PID to"
+    ID_ES_SAVE_AS           "Save current ES to file"
+    ID_ES_LOAD              "Load ES from file"
+    ID_ES_DELETE            "Delete current ES from TS"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_PARSE_SEIT_O         "OTHER_TRANSPORT_SCHEDULE_EVENT_INFORMATION"
+    ID_PARSE_PAT            "PROGRAM_ASSOCIATION_INFORMATION"
+    ID_PARSE_PMT            "PROGRAM_MAP_INFORMATION"
+    ID_PARSE_CAT            "CONDITIONAL_ACCESS_INFORMATION"
+    ID_PARSE_EMM            "ENTITLE_MANAGE_MESSAGE"
+    ID_PARSE_SPEC_SI_PSI    "Specific PID and TableID"
+    ID_SI_PSI_SAVE_AS       "Save current SI/PSI to file"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_PARSE_NIT_O          "OTHER_NETWORK_INFORMATION"
+    ID_PARSE_TDT            "TIME_DATE_INFORMATION"
+    ID_PARSE_TOT            "TIME_OFFSET_INFORMATION"
+    ID_PARSE_DIT            "DISCONTINUITY_INFORMATION"
+    ID_PARSE_RST            "RUNING_STATUS_INFORMATION"
+    ID_PARSE_SIT            "SELECTION_INFORMATION"
+    ID_PARSE_BAT            "BOUQUET_ASSOCIATION_INFORMATION"
+    ID_PARSE_SDT_A          "ACTUAL_TRANSPORT_SERVICE_DESCRIPTION"
+    ID_PARSE_SDT_O          "OTHER_TRANSPORT_SERVICE_DESCRIPTION"
+    ID_PARSE_PFEIT_A        "ACTUAL_TRANSPORT_EVENT_INFORMATION_PF"
+    ID_PARSE_PFEIT_O        "OTHER_TRANSPORT_EVENT_INFORMATION_PF"
+    ID_PARSE_SEIT_A         "ACTUAL_TRANSPORT_SCHEDULE_EVENT_INFORMATION"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_PARSE_TSDT           "TRANSPORT_STREAM_DESCRIPTION"
+    ID_PARSE_ECM_E          "ENTITLE_CONTROL_MESSAGE_EVEN"
+    ID_PARSE_ECM_O          "ENTITLE_CONTROL_MESSAGE_ODD"
+    ID_PARSE_NIT_A          "ACTUAL_NETWORK_INFORMATION"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_EDIT            "Edit selceted section"
+    ID_EDIT_SAVE            "Save edit"
+    ID_EDIT_DELETE          "Delete section"
+    ID_EDIT_COPY_PART       "copy a part of this stream to a new stream"
+    ID_EDIT_SEARCH          "search a string form current section"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "vision of this sofeware"
+    ID_APP_EXIT             "Close TS file and exit"
+END
+
+#endif    // ??(???????) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// ??(??) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 255, 211
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_BORDER | WS_SYSMENU
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "Version 1.0 - Sep 12 2008\n\nVersion 1.1 - Otc 25 2010\n\nVersion 1.2 - Jan 03 2011",
+                    IDC_STATIC,59,18,159,82,SS_NOPREFIX
+    LTEXT           "Freeware by (Tang Weimin) 2008 BeiJing China",
+                    IDC_STATIC,41,189,160,8
+    DEFPUSHBUTTON   "exit",IDOK,227,193,21,11,WS_GROUP,WS_EX_STATICEDGE
+    EDITTEXT        IDC_EDIT_COMPILE_DATE_TIME,22,165,206,13,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "If you need help, find a bug or want down latest version. \n\nPlease visit   ",
+                    IDC_STATIC,20,111,191,26
+    CTEXT           "http://dvbedit.sourceforge.net/",IDC_STATIC,63,128,122,
+                    13,WS_BORDER
+END
+
+IDD_TOOLS_CRC DIALOGEX 0, 0, 468, 262
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "input the (Hex)data to calculate CRC",IDC_STATIC,11,5,
+                    136,8
+    EDITTEXT        IDC_EDIT_RAW_DATA,7,18,454,182,ES_MULTILINE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_CRC_RESULT,7,216,353,39,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "CRC result:",IDC_STATIC,7,201,48,11
+    PUSHBUTTON      "calculate",IDC_BUTTON_CALC,398,223,48,32
+END
+
+IDD_DIALOG_PARAM_INPUT DIALOGEX 0, 0, 397, 62
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "please input"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,350,10,40,15
+    PUSHBUTTON      "EXIT",IDCANCEL,350,35,40,15
+    RTEXT           "Dec:",IDC_STATIC,0,10,30,15
+    EDITTEXT        IDC_EDIT_PARAM_INPUT_DEC,30,10,90,15,ES_AUTOHSCROLL
+    RTEXT           "Hex:",IDC_STATIC,130,10,30,15
+    EDITTEXT        IDC_EDIT_PARAM_INPUT_HEX,160,10,90,15,ES_AUTOHSCROLL
+    RTEXT           "Bin:",IDC_STATIC,0,35,30,15
+    EDITTEXT        IDC_EDIT_PARAM_INPUT_BIN,30,35,280,15,ES_AUTOHSCROLL
+END
+
+IDD_DIALOG_PID_INDEX_INPUT DIALOGEX 0, 0, 205, 54
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "please input PID and start Index"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,148,7,50,14
+    PUSHBUTTON      "EXIT",IDCANCEL,148,24,50,14
+    RTEXT           "PID:",IDC_STATIC,17,7,35,14
+    RTEXT           "Start Index:",IDC_STATIC,7,25,45,15
+    EDITTEXT        IDC_EDIT_PID_INDEX_INPUT_PID,55,7,80,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PID_INDEX_INPUT_START_INDEX,55,25,80,15,
+                    ES_AUTOHSCROLL
+END
+
+IDD_DIALOG_PID_TABLEID_INPUT DIALOGEX 0, 0, 205, 54
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "please input PID and Table ID"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,148,7,50,14
+    PUSHBUTTON      "EXIT",IDCANCEL,148,24,50,14
+    EDITTEXT        IDC_EDIT_PID_TABLE_INPUT_PID,55,7,80,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PID_TABLE_INPUT_TABLEID,55,25,80,15,
+                    ES_AUTOHSCROLL
+    RTEXT           "Table ID:",IDC_STATIC_LABEL2,7,25,45,15
+    RTEXT           "PID:",IDC_STATIC_LABEL1,17,7,35,14
+END
+
+IDD_DIALOG_SYS_CONFIG DIALOGEX 0, 0, 380, 194
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "System config"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,173,50,14
+    PUSHBUTTON      "Give up",IDCANCEL,323,173,50,14
+    EDITTEXT        IDC_EDIT_PKT_COUNT,136,20,87,14,ES_AUTOHSCROLL
+    LTEXT           "TS packet count when copy part:",IDC_STATIC,20,20,108,
+                    17
+    PUSHBUTTON      "Apply",IDC_BUTTON_APPLY,159,173,51,14
+    GROUPBOX        "Cut part",IDC_STATIC,7,7,366,40
+    GROUPBOX        "Save edition",IDC_STATIC,7,50,366,28
+    CONTROL         "Force precheck before accept edition.",
+                    IDC_CHECK_FORCE_PRECHECK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,87,58,145,18
+    GROUPBOX        "Auto load",IDC_STATIC,7,84,366,70
+    EDITTEXT        IDC_EDIT_AUTO_LOAD_PPF,49,98,324,13,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_EDIT_AUTO_LOAD_TS,48,128,325,15,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    PUSHBUTTON      "PPF",IDC_BUTTON_PPF,15,96,32,18
+    PUSHBUTTON      "TS",IDC_BUTTON_TS,15,127,31,18
+END
+
+IDD_DIALOG_EDIT_SECTION DIALOGEX 0, 0, 632, 433
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "section edition"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Save",IDOK,446,412,50,14
+    PUSHBUTTON      "Discard",IDCANCEL,506,412,50,14
+    EDITTEXT        IDC_EDIT_SECTION,7,7,618,392,ES_MULTILINE | 
+                    ES_AUTOHSCROLL | ES_NOHIDESEL | ES_WANTRETURN | 
+                    WS_VSCROLL | WS_HSCROLL
+    PUSHBUTTON      "Precheck",IDC_BUTTON_PRE_CHECK,566,407,59,19
+    EDITTEXT        IDC_EDIT_HINT,26,410,412,16,ES_MULTILINE | 
+                    ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    LTEXT           "Hint:",IDC_STATIC,7,406,26,11
+END
+
+IDD_DIALOG_PLAY DIALOGEX 0, 0, 397, 202
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | 
+    WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "TS Play"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "play",IDC_BUTTON_PLAY,344,7,46,12
+    PUSHBUTTON      "stop",IDC_BUTTON_STOP,199,7,51,12
+    CONTROL         "",IDC_LIST_PROGRAMS,"SysListView32",LVS_LIST | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SORTASCENDING | 
+                    LVS_ALIGNLEFT | LVS_NOCOLUMNHEADER | WS_BORDER | 
+                    WS_TABSTOP,7,23,383,172
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resrc1.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""resource.h""\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DIALOG_SYS_CONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 373
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 187
+    END
+
+    IDD_DIALOG_EDIT_SECTION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 625
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 426
+    END
+
+    IDD_DIALOG_PLAY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 390
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 195
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // ??(??) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

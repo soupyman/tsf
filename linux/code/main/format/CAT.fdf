@@ -1,0 +1,18 @@
+<!-- Copyright content of CAT --> 
+<TABLE name='CAT' id='1' crc='true'> 
+		<FIELD name='table_id' lenth='8' format='hex'/> 
+		<FIELD name='section_syntax_indicator' lenth='1' format='hex'/> 
+		<RESERVE lenth='3' /> 
+		<FIELD name='section_length' lenth='12' format='hex'/>
+		<RESERVE lenth='18' />
+		<FIELD name='version_number' lenth='5' format='hex'/>
+		<FIELD name='current_next_indicator' lenth='1' format='hex'/>
+		<FIELD name='section_number' lenth='8' format='hex'/> 
+		<FIELD name='last_section_number' lenth='8' format='hex'/>
+		<LOOP lenth='section_length -9'> 
+			<DESCRIPTOR/>
+		</LOOP> 
+		<FIELD name='CRC_32' lenth='32' format='hex'/>
+</TABLE> 
+
+
